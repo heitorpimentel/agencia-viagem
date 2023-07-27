@@ -17,25 +17,60 @@
 }
 
 html,body{
-    background-color: var(--cor05);
+    background-color: rgba(0, 0, 0, 0.034);
     font: var(--font01);
-    width: 100vw;
+    width: 100%;
 }
-
 #naveg{
-    background-color: var(--cor04);   
+    background-color: var(--cor04);
+    margin: auto;       
 }
-
-main{
+main{    
+    margin: auto;
     background-color: white;
-    width: 90%;    
-    margin: auto;
-    max-width: 800px;
+    width: 95%;    
+    max-width: 1200px;    
 }
-
-section{
-    border-radius: 25%;
-    width: 90%;
+.topo{
+    padding: 30px 20px;
+    background: url('../imagens/image.jpg') no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.buscas{
+    background-color: white;
+    border-radius: 80px;
+    width: 100%;
     height: 200px;
+    margin: auto;    
+}
+.slides{
+    display: block;
     margin: auto;
+    width: 100%;        
+}
+.position-card{
+    display: flex;
+    flex-wrap: wrap;    
+}
+.fundo-leve-transparencia{
+    background: url('../imagens/image.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.titulo-mensagem-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.cartoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
