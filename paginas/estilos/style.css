@@ -8,10 +8,34 @@
 
 :root{
     --font01: Arial, Helvetica, sans-serif;
-    --font02: ;
-    --cor01: ;
-    --cor02: ;
-    --cor03: ;
-    --cor04: ;
-    --cor05: ;
+    --font02: 'Courier New', Courier, monospace;
+    --cor01: #04ADBF;
+    --cor02: #04BFBF;
+    --cor03: #025959;
+    --cor04: #83BE3C;
+    --cor05: #F2E0C9;
+}
+
+html,body{
+    background-color: var(--cor05);
+    font: var(--font01);
+    width: 100vw;
+}
+
+#naveg{
+    background-color: var(--cor04);   
+}
+
+main{
+    background-color: white;
+    width: 90%;    
+    margin: auto;
+    max-width: 800px;
+}
+
+section{
+    border-radius: 25%;
+    width: 90%;
+    height: 200px;
+    margin: auto;
 }
