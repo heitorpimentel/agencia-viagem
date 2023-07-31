@@ -63,6 +63,8 @@ main{
 }
 form{
     width: 100%;
+    display: block;
+    margin: auto;
 }
 
 .buscas{
@@ -72,6 +74,12 @@ form{
     margin: auto;
     padding: 10px;
 }
+.botao-busca{
+    text-align: right;    
+}
+.botao-busca > button{
+    border-radius: 20px;
+} 
 .slides{
     display: block;
     margin: auto;
