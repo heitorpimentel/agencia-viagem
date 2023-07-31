@@ -46,8 +46,11 @@
                 <form action="" method="post">
                     <div class="fomulario container">
                         <div class="radio">
-                            <input type="radio" name="ida-ou-ida-e-volta" id="so-ida"> Somente ida
-                            <input type="radio" name="ida-ou-ida-e-volta" id="ida-volta" checked> Ida e volta
+                            <input type="radio" name="ida-ou-ida-e-volta" id="so-ida" >
+                            <label for="so-ida">Somente ida</label>
+                            <input type="radio" name="ida-ou-ida-e-volta" id="ida-volta" checked>
+                            <label for="ida-volta">Ida e volta</label>
+                            
                         </div>
                         <div class="d-flex flex-wrap">
                             <div id="ida">
@@ -59,10 +62,14 @@
                                 <div><label for="voo-de-volta"><span class="material-symbols-rounded fundo-icon">flight_land</span> Destino</label></div>
                                 <div><input class="form-control" type="text" id="voo-de-volta" list="lista-lugares"></div>
                             </div>
-                            <div class="data-ida-volta">
-                                <input type="date" name="data" id="data-de-ida">
-                                <input type="date" name="data" id="data-de-volta">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="texto-data">Ida e Volta</span>
+                                </div>
+                                <input type="date" aria-label="Ida" class="form-control" id="data-ida">
+                                <input type="date" aria-label="Volta" class="form-control" id="data-volta">
                             </div>
+                            
                         </div>
                         <div><input type="submit" id="buscar" value="Buscar" class="btn btn-lg"></div>
                     </div>
