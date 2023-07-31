@@ -18,20 +18,19 @@
 
 <body>
     <!-- início da navbar -->    
-    <nav id="naveg" class="navbar navbar-expand-sm navbar-dark p-0">
+    <nav id="naveg" class="navbar navbar-expand-sm navbar-dark p-0 sticky-top">
         <a class="navbar-brand pl-2" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse flex-wrap justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav text-center">
-                <a class="nav-item nav-link active" href="#"><span class="material-symbols-rounded">home</span><br> Início <span class="sr-only">(Página atual)</span></a>
-                <a class="nav-item nav-link" href="#"><span class="material-symbols-rounded">sell</span><br>Promoções</a>
-                <a class="nav-item nav-link" href="#"><span class="material-symbols-rounded">luggage</span><br>Hotéis</a>
-                <a class="nav-item nav-link" href="#"><span class="material-symbols-rounded">flight_takeoff</span><br>Vôos</a>
-                <a class="nav-item nav-link" href="#"><span class="material-symbols-rounded">contact_support</span><br>Contato</a>
-                <a class="nav-item nav-link ml-2" href="#">
-                <span class="material-symbols-rounded">account_circle
+            <div class="navbar-nav text-center ">
+                <a class="nav-item nav-link active" href="index.html" title="Vôos"><span class="material-symbols-rounded fundo-icon">flight_takeoff</span><br>Vôos</a>
+                <a class="nav-item nav-link" href="paginas/hoteis.html" title="Hoteis"><span class="material-symbols-rounded fundo-icon">luggage</span><br>Hotéis</a>
+                <a class="nav-item nav-link" href="paginas/promocoes.html" title="Promoções"><span class="material-symbols-rounded fundo-icon">sell</span><br>Promoções</a>
+                <a class="nav-item nav-link" href="paginas/contato.html" title="Fale conosco"><span class="material-symbols-rounded fundo-icon">contact_support</span><br>Contato</a>
+                <a class="nav-item nav-link ml-2" href="paginas/login.html" target="_blank" title="Entre ou Cadastre-se">
+                <span class="material-symbols-rounded fundo-icon">account_circle
                 </span><br> Login
                 </a>
             </div>
@@ -39,11 +38,40 @@
     </nav>    
     <!-- Fim da navbar -->
     <main>
-        <section class="topo">
+        <section class="topo">            
             <div class="buscas">
-                <h3>
-                   dd
+                <h3 class="titulo-formulario">
+                   Vôos
                 </h3>
+                <form action="" method="post">
+                    <div class="fomulario container">
+                        <div class="radio">
+                            <input type="radio" name="ida-ou-ida-e-volta" id="so-ida"> Somente ida
+                            <input type="radio" name="ida-ou-ida-e-volta" id="ida-volta" checked> Ida e volta
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <div id="ida">
+                                <div><label for="voo-de-ida"><span class="material-symbols-rounded fundo-icon">flight_takeoff</span> Origem</label></div>
+                                <div><input class="form-control" type="text" id="voo-de-ida" list="lista-lugares"></div>
+                            </div>
+                            
+                            <div id="volta">
+                                <div><label for="voo-de-volta"><span class="material-symbols-rounded fundo-icon">flight_land</span> Destino</label></div>
+                                <div><input class="form-control" type="text" id="voo-de-volta" list="lista-lugares"></div>
+                            </div>
+                            <div class="data-ida-volta">
+                                <input type="date" name="data" id="data-de-ida">
+                                <input type="date" name="data" id="data-de-volta">
+                            </div>
+                        </div>
+                        <div><input type="submit" id="buscar" value="Buscar" class="btn btn-lg"></div>
+                    </div>
+
+                    <datalist id="lista-lugares">
+                        <option>Natal, Rio Grande do Norte</option>
+                    </datalist>
+                </form>
+                
             </div>
         </section>
         <section class="slides"> <!-- início dos slides -->
@@ -75,12 +103,11 @@
             </div>
         </section> <!-- Fim dos slides -->
         <section class="position-cards">
-            <section class="fundo-leve-transparencia">
-                <section class="mensagem-card">
+            <section class="fundo-pos-slide">                
                     <div class="titulo-mensagem-card">
                         <h3>Torne cada momento inesquecível</h3>
                     </div>
-                </section>
+                
                 <section class="cartoes">
                 
                     <div class="card" style="width: 18rem;">

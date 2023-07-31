@@ -22,8 +22,18 @@ html,body{
     width: 100%;
 }
 #naveg{
-    background-color: var(--cor04);
-    margin: auto;       
+    background-color: var(--cor03);
+    margin: auto;    
+}
+a.active > .fundo-icon{
+    border-radius: 50%;    
+    background-color: var(--cor01);    
+}
+a.active{
+    border-bottom: 3px solid var(--cor01);
+}
+.fundo-icon{
+    padding: 5px;    
 }
 main{    
     margin: auto;
@@ -32,18 +42,34 @@ main{
     max-width: 1200px;    
 }
 .topo{
+    display: flex;
+    height: 300px;
     padding: 30px 20px;
-    background: url('../imagens/image.jpg') no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
-    background-size: cover;
+    background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
+    background-position: top center;    
+    background-size: cover;    
+}
+.titulo-formulario{
+    text-align: center;
+}
+form{
+    display: flex;
+    justify-content: flex-start;
+}
+.radio{
+    width: 100%;
+}
+#ida#volta{
+    display: flex;
+    justify-content: flex-start;    
 }
 .buscas{
     background-color: white;
     border-radius: 80px;
     width: 100%;
-    height: 200px;
-    margin: auto;    
+    height: 250px;
+    margin: auto;
+    padding: 10px;
 }
 .slides{
     display: block;
@@ -54,8 +80,8 @@ main{
     display: flex;
     flex-wrap: wrap;    
 }
-.fundo-leve-transparencia{
-    background: url('../imagens/image.jpg') no-repeat;
+.fundo-pos-slide{
+    background: url('../imagens/imagens-aviao/img-meio-aviao.jpg') no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
