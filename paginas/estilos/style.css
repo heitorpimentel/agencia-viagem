@@ -43,7 +43,7 @@ main{
 }
 .topo{
     display: flex;
-    height: 300px;
+    flex-wrap: wrap;
     padding: 30px 20px;
     background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
     background-position: top center;    
@@ -54,7 +54,13 @@ main{
 }
 form{
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+}
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .radio{
     width: 100%;
@@ -75,6 +81,11 @@ form{
     display: block;
     margin: auto;
     width: 100%;        
+}
+.jumbotron{
+    background: url('../imagens/imagens-hotel/img-topo-hotel.jpg') no-repeat;
+    background-position: top center;    
+    background-size: cover; 
 }
 .position-card{
     display: flex;
