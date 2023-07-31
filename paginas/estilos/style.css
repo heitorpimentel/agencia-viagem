@@ -41,7 +41,7 @@ main{
     width: 95%;    
     max-width: 1200px;    
 }
-.topo{
+.topo{    
     display: flex;
     flex-wrap: wrap;
     padding: 30px 20px;
@@ -52,28 +52,23 @@ main{
 .titulo-formulario{
     text-align: center;
 }
-form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+#datas-select{
+    display: flex;    
+    flex-wrap: wrap;    
+    gap: 10px;
 }
-.formulario{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .radio{
     width: 100%;
 }
-#ida#volta{
-    display: flex;
-    justify-content: flex-start;    
+form{
+    width: 100%;
 }
+
 .buscas{
     background-color: white;
     border-radius: 80px;
-    width: 100%;
-    height: 250px;
+    width: 100%;    
     margin: auto;
     padding: 10px;
 }
@@ -110,4 +105,14 @@ form{
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+}
+
+footer{
+    background-color: var(--cor05);
+    
+    padding: 15px;
+}
+.frase-rodape{
+    display: block;
+    margin: auto;
 }

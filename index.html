@@ -44,36 +44,57 @@
                    Vôos
                 </h3>
                 <form action="" method="post">
-                    <div class="fomulario container d-flex flex-wrap expand-sm">
-                        <div class="radio">
-                            <input type="radio" name="ida-ou-ida-e-volta" id="so-ida" >
-                            <label for="so-ida">Somente ida</label>
-                            <input type="radio" name="ida-ou-ida-e-volta" id="ida-volta" checked>
-                            <label for="ida-volta">Ida e volta</label>
-                            
-                        </div>
-                        <div >
-                            <div id="ida">
-                                <div><label for="voo-de-ida"><span class="material-symbols-rounded fundo-icon">flight_takeoff</span> Origem</label></div>
-                                <div><input class="form-control" type="text" id="voo-de-ida" list="lista-lugares"></div>
-                            </div>
-                            
-                            <div id="volta">
-                                <div><label for="voo-de-volta"><span class="material-symbols-rounded fundo-icon">flight_land</span> Destino</label></div>
-                                <div><input class="form-control" type="text" id="voo-de-volta" list="lista-lugares"></div>
-                            </div>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text" id="texto-data">Ida e Volta</span>
+                    <div class="container m-auto">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="customRadioInline1">Ida e Volta</label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">Somente Ida</label>
+                          </div>
+                        <div class="container flex-wrap">
+                            <div id="datas-select" class="row">                                
+                                    <div class="col-md-3">
+                                        <div id="label-origem"><label for="voo-de-ida"><span class="material-symbols-rounded fundo-icon">flight_takeoff</span> Origem</label></div>
+                                        <div><input class="form-control" type="text" id="voo-de-ida" list="lista-lugares"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div id="label-destino"><label for="voo-de-volta"><span class="material-symbols-rounded fundo-icon">flight_land</span> Destino</label></div>
+                                        <div><input class="form-control" type="text" id="voo-de-volta" list="lista-lugares"></div>
+                                    </div>
+                                <div class="row mt-2">                                    
+                                    <div class="col-md-6">
+                                        <span class="material-symbols-rounded fundo-icon">calendar_month</span>
+                                        <input type="date" aria-label="Ida" class="form-control" id="data-ida">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span class="material-symbols-rounded fundo-icon">calendar_month</span>
+                                        <input type="date" aria-label="Volta" class="form-control" id="data-volta">
+                                    </div>
                                 </div>
-                                <input type="date" aria-label="Ida" class="form-control" id="data-ida">
-                                <input type="date" aria-label="Volta" class="form-control" id="data-volta">
-                            </div>
-                            
-                        </div>
-                        <div><input type="submit" id="buscar" value="Buscar" class="btn btn-lg"></div>
-                    </div>
+                            </div>                                                        
+                            <div>
+                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Passageiros</label>
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="width: 80px;">
+                                    <option selected>Escolha</option>
+                                    <option value="1">Um</option>
+                                    <option value="2">Dois</option>
+                                    <option value="3">Três</option>
+                                    <option value="4">Quatro</option>
+                                    <option value="5">Cinco</option>
+                                    <option value="6">Seis</option>
+                                </select>
 
+                                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                    <label class="custom-control-label" for="customControlInline">Bebê a bordo</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary my-1">Enviar</button>
+                            </div>                            
+                        </div>
+                    </div>
                     <datalist id="lista-lugares">
                         <option>Natal, Rio Grande do Norte</option>
                     </datalist>
@@ -197,97 +218,66 @@
             </section>
         </section>
     </main>
-    <!-- Início do Rodapé -->
-    <footer class="text-lg-start bs_footer_layout7 py-5">
-        <div class="container py-3">
-            <div class="row pt-3">
-                <div class="col-12 col-md-6 col-lg-5 py-3">
-                    <div class="bs_footer_content">
-                        <div class="bs_footer_logo">
-                            <img src="https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/blockui/M95bfda1a4e4ba15a45bb9d5ae00523891675315951358/assets/M73f9c60538a41b7b568cf5e7a20c0da21675315978521/logoipsum-white.svg" class="img-fluid" alt="Logo" />
-                            <p class="mb-0 bs_footer_tagline pt-1">Help & Support Service</p>
-                        </div>
-
-                        <div class="bs_footer_links_main pt-lg-4 pt-3">
-                            <h5 class="bs_footer_links_main_label"><span>About Us</span></h5>
-                            <div class="col-10 px-0">We offers a quick, easy and complete solution to product design which everybody can use. This service is offered by 'A Logo Systems ' </div>
-                        </div>
-
-                        <div class="bs_footer_links_main pt-lg-4 pt-3">
-                            <h5 class="bs_footer_links_main_label"><span>Contact Us</span></h5>
-                            <div class="col-10 px-0">
-                                <a href="#" class="color-inherit text-decoration-none d-block pb-2"><span class="pe-2 bs_footer_contact_link"><i class="bi bi-envelope"></i></span><span>info@outlook.com</span></a>
-                                <a href="#" class="color-inherit text-decoration-none d-block"><span class="pe-2 bs_footer_contact_link"><i class="bi bi-phone"></i></span><span>+91 - 8695782326</span></a>
-                            </div>
-                        </div>
-                        
-                    </div>
+    <!-- Início do Rodapé -->        
+    <footer class="py-5">
+          <div class="container">
+              <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Seção</h5>
+                  <hr>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lar</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Características</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Preços</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">perguntas frequentes</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre</a></li>
+                  </ul>
                 </div>
-                <div class="col-12 col-md-6 col-lg-2 py-3">
-                    <div class="bs_footer_links_main">
-                        <h5 class="bs_footer_links_main_label"><span>Links</span></h5>
-                        <ul class="bs_footer_links_list text-start">
-                            <li><a href="#" class="text-decoration-none color-inherit">About</a></li>
-                            <li><a href="#" class="text-decoration-none color-inherit">Blog</a></li>
-                            <li><a href="#" class="text-decoration-none color-inherit">Services</a></li>
-                            <li><a href="#" class="text-decoration-none color-inherit">Clients</a></li>
-                            <li><a href="#" class="text-decoration-none color-inherit">Jobs</a></li>
-                        </ul>
-                    </div>
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Seção</h5>
+                  <hr>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lar</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Características</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Preços</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">perguntas frequentes</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre</a></li>
+                  </ul>
                 </div>
-                <div class="col-12 col-md-6 col-lg-2 py-3">
-                    <div class="bs_footer_links_main">
-                        <h5 class="bs_footer_links_main_label"><span>More</span></h5>
-                        <ul class="bs_footer_links_list text-start">
-                            <li><a href="#" class="text-decoration-none color-inherit">Features</a></li>
-                            <li><a href="#" class="text-decoration-none color-inherit">Our templates</a></li>
-                            <li><a href="#" class="text-decoration-none color-inherit">Help guide</a></li>
-                        </ul>
-                    </div>
+                <div class="col-6 col-md-2 mb-3">
+                  <h5>Seção</h5>
+                  <hr>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Lar</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Características</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Preços</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">perguntas frequentes</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre</a></li>
+                  </ul>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 py-3">
-                    <div class="bs_footer_links_main">
-                        <h5 class="bs_footer_links_main_label"><span>Subscribe</span></h5>
-                        <div class="bs_footer_content">
-                            <form>
-                                <div class="mb-3 position-relative d-flex align-items-center bs_newsletter_email_wrapper">
-                                    <span><i class="bi bi-envelope bs_fs-18"></i></span>
-                                    <input type="email" class="form-control bs_newsletter_email ms-2" id="bs_newsletter" placeholder="Enter your E-mail Id">
-                                </div>
-                                <button type="submit" class="btn bs_btn-submit">Submit</button>
-                              </form>
-                        </div>                       
+                <div class="col-md-5 offset-md-1 mb-3">
+                  <form>
+                    <h5>Assine a nossa newsletter</h5>
+                    <hr>
+                    <p>Resumo mensal do que há de novo e emocionante de nós.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                      <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email">
+                      <button class="btn btn-primary" type="button">Se inscrever</button>
                     </div>
+                  </form>
                 </div>
-            </div>
-
-            <div class="row bs_footer_main_row position-relative">
-                <div class="col-12">
-                    <div class="bs_footer_social_links py-2">
-                        <a href="#" class="me-4 text-reset text-decoration-none">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" class="me-4 text-reset text-decoration-none">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                        <a href="#" class="me-4 text-reset text-decoration-none">
-                            <i class="bi bi-whatsapp"></i>
-                        </a>
-                        <a href="#" class="me-4 text-reset text-decoration-none">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 text-lg-end">
-                    <div class="bs_footer_copyright_wrapper text-center text-lg-end">
-                        <p class="bs_text_copyright mb-0"> © copyright 2023 - Present. All Rights Reserved.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p class="frase-rodape">© 2023 Desenvolvido por <strong>Heitor Pimentel</strong></p>
+                <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+              </div>
+          </div>
     </footer>
-
 </body>
 
 </html>
