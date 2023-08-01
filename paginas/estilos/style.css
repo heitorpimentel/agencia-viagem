@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: var(--font01);
 }
 
 :root{
@@ -17,8 +18,7 @@
 }
 
 html,body{
-    background-color: rgba(0, 0, 0, 0.034);
-    font: var(--font01);
+    background-color: rgba(0, 0, 0, 0.034);    
     width: 100%;
 }
 #naveg{
@@ -79,16 +79,21 @@ form{
 }
 .botao-busca > button{
     border-radius: 20px;
+}
+button{
+    background-color: var(--cor03);
+    color: white;
 } 
 .slides{
     display: block;
     margin: auto;
     width: 100%;        
 }
-.jumbotron{
+.jumbotron-carousel{
     background: url('../imagens/imagens-hotel/img-topo-hotel.jpg') no-repeat;
     background-position: top center;    
-    background-size: cover; 
+    background-size: cover;
+    padding: 5rem 11rem;
 }
 .position-card{
     display: flex;
@@ -116,9 +121,19 @@ form{
 }
 
 footer{
-    background-color: var(--cor05);
-    
+    background-color: black;
+    color: white;    
     padding: 15px;
+}
+.nav-item-footer{
+    color: rgb(156, 156, 156);
+}
+.nav-item-footer:hover{
+    color: white;
+    text-decoration: underline;
+}
+.text-modal{
+    color: black;
 }
 .frase-rodape{
     display: block;
