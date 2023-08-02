@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP Viagens</title>
+    <link rel="shortcut icon" href="imagens/icone-logo.ico" type="image/x-icon"> <!-- icone -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos/style.css"> <!-- css local -->
+</head>
+
+<body>
+    <!-- início da navbar -->
+    <nav id="naveg" class="navbar navbar-expand-sm navbar-dark p-0 sticky-top">
+        <a class="navbar-brand pl-2" href="#">
+            <div class="imagem-nav"><img src="imagens/imagem-logo.jpg"
+                    alt="Imagem da Logo da página na barra de navegação" style="width: 130px; height: 60px;"></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-wrap justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-center ">
+                <a class="nav-item nav-link" href="../index.html" title="Vôos"><span
+                        class="material-symbols-rounded fundo-icon">flight_takeoff</span><br>Vôos</a>
+                <a class="nav-item nav-link" href="hoteis.html" title="Hoteis"><span
+                        class="material-symbols-rounded fundo-icon">luggage</span><br>Hotéis</a>
+                <a class="nav-item nav-link" href="onibus.html" title="Promoções"><span
+                        class="material-symbols-rounded fundo-icon">directions_bus</span><br>Ônibus</a>
+                <a class="nav-item nav-link active" href="promocoes.html" title="Promoções"><span
+                        class="material-symbols-rounded fundo-icon">sell</span><br>Promoções</a>
+                <a class="nav-item nav-link" href="contato.html" title="Fale conosco"><span
+                        class="material-symbols-rounded fundo-icon">contact_support</span><br>Contato</a>
+                <a class="nav-item nav-link ml-2" href="login.html" target="_blank" title="Entre ou Cadastre-se">
+                    <span class="material-symbols-rounded fundo-icon">account_circle
+                    </span><br> Login
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim da navbar -->
+    <main>
+        <section class="topo">
+            <div class="buscas">
+                <h3 class="titulo-formulario">
+                    Vôos
+                </h3>
+                <form action="busca-topo.html" method="post">
+                    <div class="container">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                class="custom-control-input" checked>
+                            <label class="custom-control-label" for="customRadioInline1">Ida e Volta</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">Somente Ida</label>
+                        </div>
+                        <div class="container flex-wrap">
+                            <div id="datas-select" class=" col-sm-12 ">
+                                <div class="col">
+                                    <div class="row" id="label-origem"><label for="trecho-de-ida"><span
+                                                class="material-symbols-rounded fundo-icon">flight_takeoff</span>
+                                            Origem</label></div>
+                                    <div class="row"><input class="form-control" type="text" id="trecho-de-ida"
+                                            list="lista-lugares"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="row" id="label-destino"><label for="trecho-de-volta"><span
+                                                class="material-symbols-rounded fundo-icon">flight_land</span>
+                                            Destino</label></div>
+                                    <div class="row"><input class="form-control" type="text" id="trecho-de-volta"
+                                            list="lista-lugares"></div>
+                                </div>
+
+                                <!-- Datas inicio -->
+                                <div class="col">
+                                    <div class="row"><label for="trecho-de-ida"><span
+                                                class="material-symbols-rounded fundo-icon">calendar_month</span>
+                                            Ida</label></div>
+                                    <div class="row"><input class="form-control" type="date" aria-label="Ida"
+                                            id="data-ida"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="row"><label for="trecho-de-ida"><span
+                                                class="material-symbols-rounded fundo-icon">calendar_month</span>
+                                            Volta</label></div>
+                                    <div class="row"><input class="form-control" type="date" aria-label="Volta"
+                                            id="data-volta"></div>
+                                </div>
+                                <!-- Datas fim -->
+                            </div>
+                            <!-- Selecione quantidade inicio-->
+                            <div>
+                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><span
+                                        class="material-symbols-rounded fundo-icon">diversity_3</span>Passageiros</label>
+                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
+                                    style="width: 100px;">
+                                    <option selected>Escolha</option>
+                                    <option value="1">Um</option>
+                                    <option value="2">Dois</option>
+                                    <option value="3">Três</option>
+                                    <option value="4">Quatro</option>
+                                    <option value="5">Cinco</option>
+                                    <option value="6">Seis</option>
+                                </select>
+                            </div>
+                            <!-- Selecione quantidade fim -->
+                            <!-- Botão busca -->
+                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                <label class="custom-control-label" for="customControlInline">Bebê a bordo</label>
+                                <div class="botao-busca"><button type="submit" class="btn btn-lg my-1">Buscar</button>
+                                </div>
+                            </div>
+                            <!-- Fim botao busca -->
+                        </div>
+                    </div>
+                    <datalist id="lista-lugares">
+                        <option>Natal, Rio Grande do Norte</option>
+                    </datalist>
+                </form>
+
+            </div>
+        </section>
+        <section class="slides"> <!-- início dos slides -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active jumbotron-carousel">
+                        <h1 class="display-4">Olá, mundo!</h1>
+                        <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado
+                            conteúdo ou informação.</p>
+                        <hr class="my-4">
+                        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior
+                            container.</p>
+                        <p class="preco-antigo-slide"><small><del>R$ 1.000,00</del></small></p>
+                        <p class="preco-novo-slide"><strong>R$ 800,00</strong></p>
+                        <a class="btn btn-lg" href="busca-slide.html" role="button"><button class="btn"
+                                type="button">Aproveite agora mesmo</button></a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="jumbotron-carousel">
+                            <h1 class="display-4">Olá, mundo!</h1>
+                            <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um
+                                determinado conteúdo ou informação.</p>
+                            <hr class="my-4">
+                            <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior
+                                container.</p>
+                            <p class="preco-antigo-slide"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo-slide"><strong>R$ 800,00</strong></p>
+                            <a class="btn btn-lg" href="busca-slide.html" role="button"><button class="btn"
+                                    type="button">Aproveite agora mesmo</button></a>
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="jumbotron-carousel">
+                            <h1 class="display-4">Olá, mundo!</h1>
+                            <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um
+                                determinado conteúdo ou informação.</p>
+                            <hr class="my-4">
+                            <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior
+                                container.</p>
+                            <p class="preco-antigo-slide"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo-slide"><strong>R$ 800,00</strong></p>
+                            <a class="btn btn-lg" href="busca-slide.html" role="button"><button class="btn"
+                                    type="button">Aproveite agora mesmo</button></a>
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev seta-slide" href="#carouselExampleIndicators" role="button"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next seta-slide" href="#carouselExampleIndicators" role="button"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </section> <!-- Fim dos slides -->
+        <section class="position-cards">
+            <section class="fundo-pos-slide">
+                <div class="titulo-mensagem-card">
+                    <h3>Torne cada momento inesquecível</h3>
+                </div>
+                <!-- Início dos cards -->
+                <section class="cartoes col-md-12 py-5">
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                                preencher o conteúdo do card.</p>
+                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                                preencher o conteúdo do card.</p>
+                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                                preencher o conteúdo do card.</p>
+                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                                preencher o conteúdo do card.</p>
+                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                                preencher o conteúdo do card.</p>
+                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <h5 class="card-title">Título do card</h5>
+                            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
+                                preencher o conteúdo do card.</p>
+                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
+                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
+                        </div>
+                    </div>
+
+                </section> <!-- Fim dos cards -->
+            </section>
+        </section>
+    </main>
+    <!-- Início do Rodapé -->
+    <footer class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Fale conosco</h5>
+                    <hr class="border-top">
+                    <ul class="nav flex-column">
+                        <li class="nav-item nav-item-footer mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Nossos números</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Nosso email</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Nosso Endereço</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Perguntas frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Promoções</h5>
+                    <hr class="border-top">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="promocoes.html"
+                                class="nav-item-footer nav-link p-0">Promoções Vôos</a></li>
+                        <li class="nav-item mb-2"><a href="promocoes.html"
+                                class="nav-item-footer nav-link p-0">Promoções Hotéis</a></li>
+                        <li class="nav-item mb-2"><a href="promocoes.html"
+                                class="nav-item-footer nav-link p-0">Promoções Ônibus</a></li>
+                        <li class="nav-item mb-2"><a href="promocoes.html"
+                                class="nav-item-footer nav-link p-0">Pacotes</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Sobre</h5>
+                    <hr class="border-top">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Quem somos</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Perguntas frequentes</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html"
+                                class="nav-item-footer nav-link p-0">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Rceba as novidades</h5>
+                        <hr class="py-3 border-top">
+                        <p>As melhores promoções no seu email</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Digite seu email">
+                            <button class="btn btn-secondary btn-lg" type="button" data-toggle="modal"
+                                data-target="#modalExemplo">Se inscrever</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title text-modal" id="exampleModalLabel">Parabéns!!</h4>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class=" text-modal">Agora você irá receber as melhores promoções e
+                                                aproveitar a viagem com os melhores descontos!</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p class="frase-rodape">© 2023 Desenvolvido por <strong>Heitor Pimentel</strong></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
