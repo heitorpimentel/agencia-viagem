@@ -25,7 +25,7 @@
 
 <body>
     <!-- início da navbar -->
-    <nav id="naveg" class="navbar navbar-expand-sm navbar-dark p-0 sticky-top">
+    <nav id="naveg" class="navbar navbar-expand-md navbar-dark p-0 sticky-top">
         <a class="navbar-brand pl-2" href="#">
             <div class="imagem-nav"><img src="imagens/imagem-logo.jpg"
                     alt="Imagem da Logo da página na barra de navegação" style="width: 130px; height: 60px;"></div>
@@ -55,7 +55,7 @@
     </nav>
     <!-- Fim da navbar -->
     <main>
-        <section class="topo">
+        <section class="topo-hotel">
             <div class="buscas">
                 <h3 class="titulo-formulario">
                     Vôos
@@ -74,58 +74,55 @@
                         </div>
                         <div class="container flex-wrap">
                             <div id="datas-select" class=" col-sm-12 ">
-                                <div class="col">
-                                    <div class="row" id="label-origem"><label for="trecho-de-ida"><span
-                                                class="material-symbols-rounded fundo-icon">flight_takeoff</span>
-                                            Origem</label></div>
-                                    <div class="row"><input class="form-control" type="text" id="trecho-de-ida"
+                                <div class="container col">
+                                    <div class="row" id="label-origem"><label for="cidade-hotel"><span
+                                                class="material-symbols-rounded fundo-icon">apartment</span>
+                                            Cidade</label></div>
+                                    <div class="row"><input class="form-control" type="text" id="cidade-hotel"
                                             list="lista-lugares"></div>
                                 </div>
-                                <div class="col">
-                                    <div class="row" id="label-destino"><label for="trecho-de-volta"><span
-                                                class="material-symbols-rounded fundo-icon">flight_land</span>
-                                            Destino</label></div>
-                                    <div class="row"><input class="form-control" type="text" id="trecho-de-volta"
-                                            list="lista-lugares"></div>
-                                </div>
-
+                                
                                 <!-- Datas inicio -->
                                 <div class="col">
-                                    <div class="row"><label for="trecho-de-ida"><span
+                                    <div class="row"><label for="data-de-ida"><span
                                                 class="material-symbols-rounded fundo-icon">calendar_month</span>
-                                            Ida</label></div>
+                                            Check-In</label></div>
                                     <div class="row"><input class="form-control" type="date" aria-label="Ida"
                                             id="data-ida"></div>
                                 </div>
                                 <div class="col">
-                                    <div class="row"><label for="trecho-de-ida"><span
+                                    <div class="row"><label for="data-de-volta"><span
                                                 class="material-symbols-rounded fundo-icon">calendar_month</span>
-                                            Volta</label></div>
+                                            Check-Out</label></div>
                                     <div class="row"><input class="form-control" type="date" aria-label="Volta"
                                             id="data-volta"></div>
                                 </div>
                                 <!-- Datas fim -->
-                            </div>
-                            <!-- Selecione quantidade inicio-->
-                            <div>
-                                <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><span
-                                        class="material-symbols-rounded fundo-icon">diversity_3</span>Passageiros</label>
-                                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
-                                    style="width: 100px;">
-                                    <option selected>Escolha</option>
-                                    <option value="1">Um</option>
-                                    <option value="2">Dois</option>
-                                    <option value="3">Três</option>
-                                    <option value="4">Quatro</option>
-                                    <option value="5">Cinco</option>
-                                    <option value="6">Seis</option>
-                                </select>
+                                <!-- Selecione quantidade inicio-->
+                                <div>
+                                    <div class="">
+                                        <label class=" mr-2" for="inlineFormCustomSelectPref"><span
+                                                class="material-symbols-rounded fundo-icon">king_bed</span>Quartos</label>
+                                    </div>
+                                    <div class="">
+                                        <select class="custom-select" id="inlineFormCustomSelectPref"
+                                            style="width: 100px;">
+                                            <option selected>Escolha</option>
+                                            <option value="1">Um</option>
+                                            <option value="2">Dois</option>
+                                            <option value="3">Três</option>
+                                            <option value="4">Quatro</option>
+                                            <option value="5">Cinco</option>
+                                            <option value="6">Seis</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Selecione quantidade fim -->
                             <!-- Botão busca -->
                             <div class="custom-control custom-checkbox my-1 mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                <label class="custom-control-label" for="customControlInline">Bebê a bordo</label>
+                                <label class="custom-control-label" for="customControlInline">Bebê</label>
                                 <div class="botao-busca"><button type="submit" class="btn btn-lg my-1">Buscar</button>
                                 </div>
                             </div>
@@ -330,8 +327,6 @@
                                 class="nav-item-footer nav-link p-0">Quem somos</a></li>
                         <li class="nav-item mb-2"><a href="contato.html"
                                 class="nav-item-footer nav-link p-0">Perguntas frequentes</a></li>
-                        <li class="nav-item mb-2"><a href="contato.html"
-                                class="nav-item-footer nav-link p-0">Sobre nós</a></li>
                     </ul>
                 </div>
                 <div class="col-md-5 offset-md-1 mb-3">

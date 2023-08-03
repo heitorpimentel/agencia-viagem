@@ -25,7 +25,7 @@
 
 <body>
     <!-- início da navbar -->
-    <nav id="naveg" class="navbar navbar-expand-sm navbar-dark p-0 sticky-top">
+    <nav id="naveg" class="navbar navbar-expand-md navbar-dark p-0 sticky-top">
         <a class="navbar-brand pl-2" href="#">
             <div class="imagem-nav"><img src="imagens/imagem-logo.jpg"
                     alt="Imagem da Logo da página na barra de navegação" style="width: 130px; height: 60px;"></div>
@@ -55,7 +55,7 @@
     </nav>
     <!-- Fim da navbar -->
     <main>
-        <section class="topo">
+        <section class="topo-onibus">
             <div class="buscas">
                 <h3 class="titulo-formulario">
                     Vôos
@@ -76,14 +76,14 @@
                             <div id="datas-select" class=" col-sm-12 ">
                                 <div class="col">
                                     <div class="row" id="label-origem"><label for="trecho-de-ida"><span
-                                                class="material-symbols-rounded fundo-icon">flight_takeoff</span>
+                                                class="material-symbols-rounded fundo-icon">directions_bus</span>
                                             Origem</label></div>
                                     <div class="row"><input class="form-control" type="text" id="trecho-de-ida"
                                             list="lista-lugares"></div>
                                 </div>
                                 <div class="col">
                                     <div class="row" id="label-destino"><label for="trecho-de-volta"><span
-                                                class="material-symbols-rounded fundo-icon">flight_land</span>
+                                                class="material-symbols-rounded fundo-icon">directions_bus</span>
                                             Destino</label></div>
                                     <div class="row"><input class="form-control" type="text" id="trecho-de-volta"
                                             list="lista-lugares"></div>
@@ -140,75 +140,7 @@
             </div>
         </section>
         <section class="slides"> <!-- início dos slides -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active jumbotron-carousel">
-                        <h1 class="display-4">Olá, mundo!</h1>
-                        <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado
-                            conteúdo ou informação.</p>
-                        <hr class="my-4">
-                        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior
-                            container.</p>
-                        <p class="preco-antigo-slide"><small><del>R$ 1.000,00</del></small></p>
-                        <p class="preco-novo-slide"><strong>R$ 800,00</strong></p>
-                        <a class="btn btn-lg" href="busca-slide.html" role="button"><button class="btn"
-                                type="button">Aproveite agora mesmo</button></a>
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="jumbotron-carousel">
-                            <h1 class="display-4">Olá, mundo!</h1>
-                            <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um
-                                determinado conteúdo ou informação.</p>
-                            <hr class="my-4">
-                            <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior
-                                container.</p>
-                            <p class="preco-antigo-slide"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo-slide"><strong>R$ 800,00</strong></p>
-                            <a class="btn btn-lg" href="busca-slide.html" role="button"><button class="btn"
-                                    type="button">Aproveite agora mesmo</button></a>
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="jumbotron-carousel">
-                            <h1 class="display-4">Olá, mundo!</h1>
-                            <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um
-                                determinado conteúdo ou informação.</p>
-                            <hr class="my-4">
-                            <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior
-                                container.</p>
-                            <p class="preco-antigo-slide"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo-slide"><strong>R$ 800,00</strong></p>
-                            <a class="btn btn-lg" href="busca-slide.html" role="button"><button class="btn"
-                                    type="button">Aproveite agora mesmo</button></a>
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev seta-slide" href="#carouselExampleIndicators" role="button"
-                    data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next seta-slide" href="#carouselExampleIndicators" role="button"
-                    data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Próximo</span>
-                </a>
-            </div>
+            
         </section> <!-- Fim dos slides -->
         <section class="position-cards">
             <section class="fundo-pos-slide">
@@ -216,72 +148,79 @@
                     <h3>Torne cada momento inesquecível</h3>
                 </div>
                 <!-- Início dos cards -->
-                <section class="cartoes col-md-12 py-5">
+                <section class="cartoes py-5">
 
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+
+                    <div class="container container-fluid card" >                        
                         <div class="card-body">
                             <h5 class="card-title">Título do card</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
                                 preencher o conteúdo do card.</p>
-                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                            <p class="col">
+                                <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                <strong class="row preco-novo">R$ 800,00</strong>
+                            </p>                            
                             <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="container container-fluid card">                        
                         <div class="card-body">
                             <h5 class="card-title">Título do card</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
                                 preencher o conteúdo do card.</p>
-                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                                <p class="col">
+                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                    <strong class="row preco-novo">R$ 800,00</strong>
+                                </p>
                             <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="container container-fluid card">                        
                         <div class="card-body">
                             <h5 class="card-title">Título do card</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
                                 preencher o conteúdo do card.</p>
-                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                                <p class="col">
+                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                    <strong class="row preco-novo">R$ 800,00</strong>
+                                </p>
                             <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="container container-fluid card">                        
                         <div class="card-body">
                             <h5 class="card-title">Título do card</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
                                 preencher o conteúdo do card.</p>
-                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                                <p class="col">
+                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                    <strong class="row preco-novo">R$ 800,00</strong>
+                                </p>
                             <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="container container-fluid card">                        
                         <div class="card-body">
                             <h5 class="card-title">Título do card</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
                                 preencher o conteúdo do card.</p>
-                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                                <p class="col">
+                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                    <strong class="row preco-novo">R$ 800,00</strong>
+                                </p>
                             <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
                         </div>
                     </div>
 
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+                    <div class="container container-fluid card">                        
                         <div class="card-body">
                             <h5 class="card-title">Título do card</h5>
                             <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer
                                 preencher o conteúdo do card.</p>
-                            <p class="preco-antigo"><small><del>R$ 1.000,00</del></small></p>
-                            <p class="preco-novo"><strong>R$ 800,00</strong></p>
+                                <p class="col">
+                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                    <strong class="row preco-novo">R$ 800,00</strong>
+                                </p>
                             <a href="busca-cards.html" class="btn botao-busca"><button class="btn" type="button">Aproveite já</button></a>
                         </div>
                     </div>
@@ -330,8 +269,6 @@
                                 class="nav-item-footer nav-link p-0">Quem somos</a></li>
                         <li class="nav-item mb-2"><a href="contato.html"
                                 class="nav-item-footer nav-link p-0">Perguntas frequentes</a></li>
-                        <li class="nav-item mb-2"><a href="contato.html"
-                                class="nav-item-footer nav-link p-0">Sobre nós</a></li>
                     </ul>
                 </div>
                 <div class="col-md-5 offset-md-1 mb-3">
@@ -341,7 +278,7 @@
                         <p>As melhores promoções no seu email</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
 
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Digite seu email">
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Digite seu email" required >
                             <button class="btn btn-secondary btn-lg" type="button" data-toggle="modal"
                                 data-target="#modalExemplo">Se inscrever</button>
                             <!-- Modal -->

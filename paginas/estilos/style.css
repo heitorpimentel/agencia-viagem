@@ -21,7 +21,7 @@
 }
 
 html,body{
-    background-color: rgba(0, 0, 0, 0.034);
+    background-color: rgba(0, 0, 0, 0.068);
     width: 100%;    
 }
 #naveg{
@@ -44,13 +44,35 @@ main{
     width: 95%;
     max-width: 1200px;
 }
-.topo{    
+.topo-voo{    
     display: flex;
     flex-wrap: wrap;
     padding: 30px 20px;
     background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
     background-position: top center;    
     background-size: cover;    
+}
+.topo-hotel{    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
+    background-position: top center;    
+    background-size: cover;    
+}
+.topo-onibus{    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
+    background-position: top center;    
+    background-size: cover;    
+}
+
+.topo{
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 20px;
 }
 .titulo-formulario{
     text-align: center;
@@ -68,6 +90,12 @@ form{
     width: 100%;
     display: block;
     margin: auto;
+}
+#label-origem{
+    min-width: 280px;
+}
+#label-destino{
+    min-width: 280px;
 }
 
 .buscas{
@@ -96,7 +124,7 @@ button{
     background: url('../imagens/imagens-hotel/img-topo-hotel.jpg') no-repeat;
     background-position: top center;    
     background-size: cover;
-    padding: 5rem 11rem;
+    padding: 3rem 10vw;
 }
 .position-card{
     display: flex;
@@ -116,6 +144,12 @@ button{
     height: 100%;
     padding: 20px;
 }
+.titulo-mensagem-card > h3{
+    color: white;
+    font-size: 3em;
+    padding-top: 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.452);
+} 
 .cartoes{
     display: flex;
     flex-wrap: wrap;
