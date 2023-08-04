@@ -56,16 +56,17 @@ main{
     display: flex;
     flex-wrap: wrap;
     padding: 30px 20px;
-    background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
-    background-position: top center;    
+    background-color: var(--cor05);
+    background: url('../imagens/imagens-hotel/img-meio-hotel.jpg') no-repeat fixed;
+    background-position: bottom right;    
     background-size: cover;    
 }
 .topo-onibus{    
     display: flex;
     flex-wrap: wrap;
     padding: 30px 20px;
-    background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
-    background-position: top center;    
+    background: url('../imagens/imagens-onibus/img-topo-onibus.jpg') no-repeat fixed;
+    background-position: bottom left;    
     background-size: cover;    
 }
 
@@ -121,17 +122,81 @@ button{
     width: 100%;        
 }
 .jumbotron-carousel{
-    background: url('../imagens/imagens-hotel/img-topo-hotel.jpg') no-repeat;
-    background-position: top center;    
-    background-size: cover;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 4px 12px rgb(0, 0, 0, 1.0);
     padding: 3rem 10vw;
 }
+.slide-01-voo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;
+}
+.slide-02-voo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-03-voo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-01-hotel{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-02-hotel{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-03-hotel{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-01-promo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-02-promo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+.slide-03-promo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background-position: center center;    
+    background-size: cover;    
+}
+
 .position-card{
     display: flex;
     flex-wrap: wrap;    
 }
-.fundo-pos-slide{
+.fundo-pos-slide-voo{
     background: url('../imagens/imagens-aviao/img-meio-aviao.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fundo-pos-slide-hotel{
+    background: url('../imagens/imagens-hotel/img-meio-hotel.jpg') no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fundo-pos-slide-onibus{
+    background: url('../imagens/imagens-onibus/img-topo-onibus.jpg') no-repeat fixed;
+    background-position: bottom left; 
+    background-attachment: fixed;
+    background-size: cover;
+}
+.fundo-pos-slide-promo{
+    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -148,7 +213,7 @@ button{
     color: white;
     font-size: 3em;
     padding-top: 30px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.452);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.452);
 } 
 .cartoes{
     display: flex;
