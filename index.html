@@ -57,17 +57,17 @@
                             <div id="datas-select" class=" col-sm-12 ">                                
                                     <div class="col">
                                         <div class="row" id="label-origem"><label for="trecho-de-ida"><span class="material-symbols-rounded fundo-icon">flight_takeoff</span> Origem</label></div>
-                                        <div class="row"><input class="form-control" type="text" id="trecho-de-ida" list="lista-lugares"></div>
+                                        <div class="row"><input class="form-control" type="text" id="trecho-de-ida" list="lista-lugares" placeholder="Busque por aeroporto" required></div>
                                     </div>
                                     <div class="col">
                                       <div class="row" id="label-destino"><label for="trecho-de-volta"><span class="material-symbols-rounded fundo-icon">flight_land</span> Destino</label></div>
-                                      <div class="row"><input class="form-control" type="text" id="trecho-de-volta" list="lista-lugares"></div>
+                                      <div class="row"><input class="form-control" type="text" id="trecho-de-volta" list="lista-lugares" placeholder="Busque por aeroporto" required></div>
                                     </div>
                                     
                                     <!-- Datas inicio -->
                                     <div class="col">
                                       <div class="row"><label for="trecho-de-ida"><span class="material-symbols-rounded fundo-icon">calendar_month</span> Ida</label></div>
-                                      <div class="row"><input class="form-control" type="date" aria-label="Ida" id="data-ida"></div>
+                                      <div class="row"><input class="form-control" type="date" aria-label="Ida" id="data-ida" required></div>
                                   </div>
                                   <div class="col">
                                     <div class="row"><label for="trecho-de-ida"><span class="material-symbols-rounded fundo-icon">calendar_month</span> Volta</label></div>
@@ -78,14 +78,14 @@
                                 <!-- Selecione quantidade inicio-->                                                        
                                 <div class="ml-3">
                                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><span class="material-symbols-rounded fundo-icon">diversity_3</span>Passageiros</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="width: 100px;">
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" style="width: 100px;" required>
                                         <option selected>Escolha</option>
-                                        <option value="1">Um</option>
-                                        <option value="2">Dois</option>
-                                        <option value="3">Três</option>
-                                        <option value="4">Quatro</option>
-                                        <option value="5">Cinco</option>
-                                        <option value="6">Seis</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
                                     </select>    
                                   </div> 
                                   <!-- Selecione quantidade fim -->
@@ -99,7 +99,10 @@
                         </div>
                     </div>
                     <datalist id="lista-lugares">
-                        <option>Natal, Rio Grande do Norte</option>
+                        <option value="REC">Recife (REC)</option>
+                        <option value="NAT">Natal (NAT)</option>
+                        <option value="SAO">São Paulo - Todos os Aeroportos (SAO)</option>
+                        <option value="RIO">Rio de Janeiro - Todos os Aeroportos (RIO)</option>
                     </datalist>
                 </form>
                 
@@ -109,10 +112,8 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active jumbotron-carousel slide-01-voo">
-                        <h1 class="display-4">Olá, mundo!</h1>
-                        <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado conteúdo ou informação.</p>
-                        <hr class="my-4">
-                        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+                        <h1>Conheça o Nordeste</h1>                        
+                        <p>Aproveite para conhecer Natal com um super desconto!</p>
                         <p class="col">
                           <small class="row preco-antigo-slide"><del>R$ 1.000,00</del></small>
                           <strong class="row preco-novo-slide">R$ 800,00</strong>
@@ -126,15 +127,13 @@
                   </div>
                   <div class="carousel-item">
                     <div class="jumbotron-carousel slide-02-voo">
-                        <h1 class="display-4">Olá, mundo!</h1>
-                        <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado conteúdo ou informação.</p>
-                        <hr class="my-4">
-                        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+                        <h1>Conheça o Nordeste</h1>                        
+                        <p>Aproveite para conhecer João Pessoa com um super desconto!</p>
                         <p class="col">
                           <small class="row preco-antigo-slide"><del>R$ 1.000,00</del></small>
                           <strong class="row preco-novo-slide">R$ 800,00</strong>
                         </p>
-                        <a class="btn btn-lg container" href="paginas/busca-slide.html" role="button"><button class="btn" type="button">Aproveite agora mesmo</button></a>
+                        <a class="btn btn-lg" href="paginas/busca-slide.html" role="button"><button class="btn" type="button">Aproveite agora mesmo</button></a>
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
@@ -144,10 +143,8 @@
                   </div>
                   <div class="carousel-item">
                     <div class="jumbotron-carousel slide-03-voo">
-                        <h3>bla</h3>
-                        <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado conteúdo ou informação.</p>
-
-                        <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+                        <h1>Conheça o Nordeste</h1>
+                        <p>Conheça as melhores praias do Nordeste e curta as férias</p>
                         <p class="col">
                           <small class="row preco-antigo-slide"><del>R$ 1.000,00</del></small>
                           <strong class="row preco-novo-slide">R$ 800,00</strong>
@@ -268,7 +265,6 @@
                     <li class="nav-item nav-item-footer mb-2"><a href="paginas/contato.html" class="nav-item-footer nav-link p-0">Nossos números</a></li>
                     <li class="nav-item mb-2"><a href="paginas/contato.html" class="nav-item-footer nav-link p-0">Nosso email</a></li>
                     <li class="nav-item mb-2"><a href="paginas/contato.html" class="nav-item-footer nav-link p-0">Nosso Endereço</a></li>
-                    <li class="nav-item mb-2"><a href="paginas/contato.html" class="nav-item-footer nav-link p-0">Perguntas frequentes</a></li>
                   </ul>
                 </div>
                 <div class="col-6 col-md-2 mb-3">

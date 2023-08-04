@@ -33,7 +33,16 @@ a.active > .fundo-icon{
     background-color: var(--cor01);    
 }
 a.active{
-    border-bottom: 3px solid var(--cor01);
+    border-bottom: 3px solid var(--cor01);   
+}
+.nav-link:hover{
+    border-bottom: 3px solid var(--cor01);   
+    transition: 0.15s;
+}
+a.nav-link > .fundo-icon:hover{
+    border-radius: 50%;    
+    background-color: var(--cor01);
+    transition: 0.3s;
 }
 .fundo-icon{
     padding: 5px;    
@@ -128,19 +137,19 @@ button{
     padding: 3rem 10vw;
 }
 .slide-01-voo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
-    background-position: center center;    
+    background: url('../imagens/imagens-aviao/imagem-slide01-voo.jpg') no-repeat;
+    background-position: center top;    
     background-size: cover;
 }
 .slide-02-voo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
+    background: url('../imagens/imagens-aviao/imagem-slide02-voo.jpg') no-repeat;
+    background-position: center bottom;    
+    background-size: cover;
 }
 .slide-03-voo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
+    background: url('../imagens/imagens-aviao/imagem-slide03-voo.jpg') no-repeat;
+    background-position: center bottom;    
+    background-size: cover;
 }
 .slide-01-hotel{
     background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
@@ -171,6 +180,21 @@ button{
     background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
     background-position: center center;    
     background-size: cover;    
+}
+
+.preco-antigo-slide{
+    font-size: 12px;
+    color: lightgray;
+}
+.preco-novo-slide{
+    font-size: 24px;
+}
+.preco-antigo{
+    font-size: 10px;
+    color: gray;
+}
+.preco-novo{
+    font-size: 20px;
 }
 
 .position-card{
@@ -205,8 +229,7 @@ button{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    
     padding: 20px;
 }
 .titulo-mensagem-card > h3{
