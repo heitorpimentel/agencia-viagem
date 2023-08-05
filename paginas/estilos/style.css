@@ -35,10 +35,10 @@ a.active > .fundo-icon{
 a.active{
     border-bottom: 3px solid var(--cor01);   
 }
-/* .nav-link:hover{
+.nav-link:hover{
     border-bottom: 3px solid var(--cor01);   
     transition: 0.15s;
-} */ 
+} 
 a.nav-link > .fundo-icon:hover{
     border-radius: 50%;    
     background-color: var(--cor01);
