@@ -35,10 +35,10 @@ a.active > .fundo-icon{
 a.active{
     border-bottom: 3px solid var(--cor01);   
 }
-.nav-link:hover{
+/* .nav-link:hover{
     border-bottom: 3px solid var(--cor01);   
     transition: 0.15s;
-}
+} */ 
 a.nav-link > .fundo-icon:hover{
     border-radius: 50%;    
     background-color: var(--cor01);
@@ -57,8 +57,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     padding: 30px 20px;
-    background: url('../imagens/imagens-aviao/img-topo-aviao.jpg') no-repeat;
-    background-position: top center;    
+    background: url('../imagens/imagens-aviao/img-meio-aviao.jpg') no-repeat fixed;
+    background-position: center center;    
     background-size: cover;    
 }
 .topo-hotel{    
@@ -124,6 +124,10 @@ form{
 button{
     background-color: var(--cor03);
     color: white;
+}
+button:hover{
+    background-color: var(--cor01);
+    transition: 0.7s;
 } 
 .slides{
     display: block;
@@ -152,17 +156,17 @@ button{
     background-size: cover;
 }
 .slide-01-hotel{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background: url('../imagens/imagens-hotel/img-slide-01-hotel.jpg') no-repeat;
     background-position: center center;    
     background-size: cover;    
 }
 .slide-02-hotel{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background: url('../imagens/imagens-hotel/img-slide-02-hotel.jpg') no-repeat;
     background-position: center center;    
     background-size: cover;    
 }
 .slide-03-hotel{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background: url('../imagens/imagens-hotel/img-slide-03-hotel.jpg') no-repeat;
     background-position: center center;    
     background-size: cover;    
 }
@@ -196,7 +200,10 @@ button{
 .preco-novo{
     font-size: 20px;
 }
-
+.card{
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.808);
+    
+}
 .position-card{
     display: flex;
     flex-wrap: wrap;    
@@ -220,7 +227,7 @@ button{
     background-size: cover;
 }
 .fundo-pos-slide-promo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
+    background: url('../imagens/imagens-hotel/img-slide-01-hotel.jpg') no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
