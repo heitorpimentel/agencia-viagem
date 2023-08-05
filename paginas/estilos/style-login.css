@@ -51,7 +51,7 @@ section#login{
 
 section#login > section#imagem{
     display: block;
-    background: url('../imagens/HV.png') no-repeat fixed;
+    background: url('../imagens/HV.png') no-repeat ;
     background-position: center center;
     background-size: cover;
     height: 160px;
