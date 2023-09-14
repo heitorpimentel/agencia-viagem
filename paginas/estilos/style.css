@@ -13,20 +13,20 @@
     --font01: 'Rubik', sans-serif;
     --font02: 'Hind Madurai', sans-serif;
     --font03: Arial, Helvetica, sans-serif;
-    --cor01: #04ADBF;
+    --cor01: #536FDB;
     --cor02: #04BFBF;
-    --cor03: #025959;
-    --cor04: #83BE3C;
-    --cor05: #F2E0C9;
+    --cor03: #455BB5;
+    --cor04: #36488F;
+    --cor05: #1E284F;
 }
 
 html,body{
-    background-color: rgba(0, 0, 0, 0.068);
-    width: 100%;    
+    background-color: #536edb42;
+    width: 100%;
 }
 #naveg{
-    background-color: var(--cor03);
-    margin: auto;    
+    background-color: var(--cor05);
+    margin: auto;
 }
 a.active > .fundo-icon{
     border-radius: 50%;    
@@ -50,7 +50,7 @@ a.nav-link > .fundo-icon:hover{
 main{    
     margin: auto;
     background-color: white;
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
 }
 .topo-voo{    

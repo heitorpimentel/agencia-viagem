@@ -13,22 +13,22 @@
     --font01: 'Rubik', sans-serif;
     --font02: 'Hind Madurai', sans-serif;
     --font03: Arial, Helvetica, sans-serif;
-    --cor01: #04ADBF;
+    --cor01: #536FDB;
     --cor02: #04BFBF;
-    --cor03: #025959;
-    --cor04: #83BE3C;
-    --cor05: #F2E0C9;
+    --cor03: #455BB5;
+    --cor04: #36488F;
+    --cor05: #1E284F;
 }
 
 body{
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: var(--cor02);
+    background-color: var(--cor04);
 }
 
 body, html{
-    background-color: var(--cor02);
+    background-color: var(--cor04);
     height: 100vh;
     width: 100vw;
 }
