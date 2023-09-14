@@ -17,7 +17,7 @@
     --cor02: #04BFBF;
     --cor03: #455BB5;
     --cor04: #36488F;
-    --cor05: #1E284F;
+    --cor05: #1e284f;
 }
 
 html,body{
@@ -51,7 +51,7 @@ main{
     margin: auto;
     background-color: white;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
 }
 .topo-voo{    
     display: flex;
