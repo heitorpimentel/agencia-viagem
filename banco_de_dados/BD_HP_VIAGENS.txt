@@ -1,15 +1,14 @@
 -- Geração de Modelo físico
 -- Sql ANSI 2003 - brModelo.
 
-
-CREATE DATABASE HP_viagens;
-Use HP_viagens;
+CREATE DATABASE hp_viagens;
+Use hp_viagens;
 
 CREATE TABLE Cliente (
 id_cliente INT auto_increment PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
 sexo VARCHAR(10),
-data_nasc DATETIME NOT NULL,
+data_nasc DATE NOT NULL,
 cpf VARCHAR(14) UNIQUE KEY,
 email VARCHAR(50),
 senha VARCHAR(50) NOT NULL,
@@ -20,7 +19,7 @@ CREATE TABLE Reserva (
 id_reserva INT auto_increment PRIMARY KEY,
 data_reserva DATETIME,
 status_reserva VARCHAR(10),
-valor_reserva float,
+valor_reserva DECIMAL(10,2),
 id_cliente INT,
 id_viagem INT,
 id_pagamento INT,
@@ -33,14 +32,14 @@ origem VARCHAR(30),
 destino VARCHAR(30),
 data_ida DATETIME,
 data_volta DATETIME,
-valor_viagem DECIMAL(10)
+valor_viagem DECIMAL(10,2)
 );
 
 CREATE TABLE Pagamento (
 id_pagamento INT auto_increment PRIMARY KEY,
 status_pag VARCHAR(10),
 data_pag DATETIME,
-valor_pag DECIMAL(10),
+valor_pag DECIMAL(10,2),
 forma_pag VARCHAR(10),
 parcela INTEGER
 );
