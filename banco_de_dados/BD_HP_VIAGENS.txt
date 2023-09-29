@@ -5,21 +5,20 @@ CREATE DATABASE hp_viagens;
 Use hp_viagens;
 
 CREATE TABLE Cliente (
-id_cliente INT auto_increment PRIMARY KEY,
-nome VARCHAR(100) NOT NULL,
-sexo VARCHAR(10),
+id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(150) NOT NULL,
+sexo VARCHAR(50),
 data_nasc DATE NOT NULL,
-cpf VARCHAR(14) UNIQUE KEY,
-email VARCHAR(50),
-senha VARCHAR(50) NOT NULL,
+cpf VARCHAR(11) UNIQUE KEY,
+email VARCHAR(255),
+senha VARCHAR(100) NOT NULL,
 telefone VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE Reserva (
-id_reserva INT auto_increment PRIMARY KEY,
-data_reserva DATETIME,
-status_reserva VARCHAR(10),
-valor_reserva DECIMAL(10,2),
+id_reserva INT AUTO_INCREMENT PRIMARY KEY,
+data_reserva TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Assim que adiciona os dados a data  e hora são incluidas automaticamente
+status_reserva ENUM('Confirmada', 'Pendente'),
 id_cliente INT,
 id_viagem INT,
 id_pagamento INT,
@@ -27,22 +26,30 @@ FOREIGN KEY(id_cliente) REFERENCES Cliente (id_cliente)
 );
 
 CREATE TABLE Viagem (
-id_viagem INT auto_increment PRIMARY KEY,
-origem VARCHAR(30),
-destino VARCHAR(30),
+id_viagem INT AUTO_INCREMENT PRIMARY KEY,
+origem VARCHAR(50),
+destino VARCHAR(50),
 data_ida DATETIME,
-data_volta DATETIME,
-valor_viagem DECIMAL(10,2)
+data_volta DATETIME
 );
 
 CREATE TABLE Pagamento (
-id_pagamento INT auto_increment PRIMARY KEY,
-status_pag VARCHAR(10),
+id_pagamento INT AUTO_INCREMENT PRIMARY KEY,
+status_pag  ENUM('Pago', 'Pendente'),
 data_pag DATETIME,
 valor_pag DECIMAL(10,2),
 forma_pag VARCHAR(10),
-parcela INTEGER
+parcela TINYINT
 );
 
 ALTER TABLE Reserva ADD FOREIGN KEY(id_viagem) REFERENCES Viagem (id_viagem);
 ALTER TABLE Reserva ADD FOREIGN KEY(id_pagamento) REFERENCES Pagamento (id_pagamento);
+
+
+-- Pesquisa direta no banco para mostrar dados da reserva juntando as tabelas
+ SELECT r.id_reserva, r.data_reserva, c.nome AS nome, v.origem, v.destino, p.status_pag,
+ p.valor_pag, v.data_ida, v.data_volta
+ FROM reserva AS r INNER JOIN cliente AS c ON r.id_cliente = c.id_cliente
+ INNER JOIN viagem AS v ON r.id_viagem = v.id_viagem
+ INNER JOIN pagamento AS p ON r.id_pagamento = p.id_pagamento
+ where r.id_reserva = ?;
