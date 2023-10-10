@@ -32,6 +32,9 @@ a.active > .fundo-icon{
     border-radius: 50%;    
     background-color: var(--cor01);    
 }
+.nav-link{
+    padding-bottom: 3px;
+}
 a.active{
     border-bottom: 3px solid var(--cor01);   
 }
@@ -45,7 +48,7 @@ a.nav-link > .fundo-icon:hover{
     transition: 0.3s;
 }
 .fundo-icon{
-    padding: 5px;    
+    padding: 8px;    
 }
 main{    
     margin: auto;
