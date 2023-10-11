@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
+        <title>Cadastro</title>
         <link rel="shortcut icon" href="imagens/icone-logo.ico" type="image/x-icon"> <!-- icone -->
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -40,6 +40,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 100%;
+                height: 100hw;
             }       
             section#login{                
                 padding: 15px;
@@ -68,7 +69,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                         <label for="inputNome">Nome completo</label>
-                        <input type="text" class="form-control" id="inputNome" name="nome" placeholder="Nome completo">
+                        <input type="text" class="form-control" id="inputNome" name="nome" placeholder="Nome completo" autofocus required>
                         </div>
                         <div class="col-sm-10 d-flex pb-3">
                             <div class="form-check pr-3">
@@ -92,11 +93,11 @@
                           </div>
                         <div class="form-group col-md-6">
                         <label for="inputPassword4">Data de nascimento</label>
-                        <input type="date" class="form-control" id="inputPassword4" name="data_nasc" placeholder="Data de nascimento">
+                        <input type="date" class="form-control" id="inputPassword4" name="data_nasc" placeholder="Data de nascimento" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputAddress">CPF</label>
-                            <input type="text" class="form-control" id="inputAddress" name="cpf" placeholder="000.000.000-00">
+                            <input type="text" class="form-control" id="inputAddress" name="cpf" placeholder="000.000.000-00" onblur="formataCPF(this)" pattern="[0-9]{11}" minlength="11" maxlength="11" required>
                         </div>
                     </div>
             
@@ -107,22 +108,47 @@
                         </div>
                         <div class="form-group col-md-12">
                         <label for="inputCEP">Senha</label>
-                        <input type="password" name="senha" class="form-control" id="inputCEP" placeholder="Mínimo 8 caracteres" minlength="8" required>
+                        <input type="password" name="senha" class="form-control" id="inputCEP" placeholder="Mínimo 8 caracteres" pattern=".{8,}" title="Oito ou mais caracteres" required>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="inputCity">Telefone</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="(xx) xxxxx-xxxx" required>
+                        <input type="text" class="form-control" id="inputCity" placeholder="(xx) xxxxx-xxxx" onblur="formataTEL(this)" pattern="[0-9]{11}" maxlength="11" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
                         <label class="form-check-label" for="gridCheck">
                             Ao clicar, você aceita os termos e condições de uso.
                         </label>
                         </div>
                     </div>
                     <button type="submit" class="container btn btn-primary">Cadastrar</button>
+
+                    <script>
+                        function formataCPF(cpf) {
+                            const elementoAlvo = cpf
+                            const cpfAtual = cpf.value
+                            let cpfAtualizado;
+
+                            cpfAtualizado = cpfAtual.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, 
+                            function( regex, argumento1, argumento2, argumento3, argumento4 ) {
+                                    return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
+                            })  
+                            elementoAlvo.value = cpfAtualizado; 
+                            }
+                            /* function formataTEL(telef) {
+                            const elementoAlvo = telef
+                            const telefAtual = telef.value
+                            let telefAtualizado;
+
+                            cpfAtualizado = cpfAtual.replace(/(\d{2})(\d{4,5})(\d{4})/, 
+                            function( regex, argumento1, argumento2, argumento3) {
+                                    return '(' + argumento1 + ')' + argumento2 + '-' + argumento3;
+                            })  
+                            elementoAlvo.value = telefAtualizado; 
+                            } */
+                    </script>
                 </form>
                 </section>        
             </section>
