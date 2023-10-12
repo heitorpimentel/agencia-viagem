@@ -35,6 +35,9 @@
                 background-attachment: fixed;
                 background-repeat: no-repeat;
             }
+            .data-nasc{
+                cursor: pointer;
+            }
             .centralizar{
                 display: flex;
                 justify-content: center;
@@ -84,7 +87,7 @@
                                 Feminino
                               </label>
                             </div>
-                            <div class="form-check disabled">
+                            <div class="form-check">
                               <input class="form-check-input" type="radio" name="sexo" id="gridRadios3" value="outro">
                               <label class="form-check-label" for="gridRadios3">
                                 Outro
@@ -92,12 +95,12 @@
                             </div>
                           </div>
                         <div class="form-group col-md-6">
-                        <label for="inputPassword4">Data de nascimento</label>
-                        <input type="date" class="form-control" id="inputPassword4" name="data_nasc" placeholder="Data de nascimento" required>
+                        <label for="inputPassword">Data de nascimento</label>
+                        <input type="date" class="form-control data-nasc" id="inputPassword" name="data_nasc" placeholder="Data de nascimento" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputAddress">CPF</label>
-                            <input type="text" class="form-control" id="inputAddress" name="cpf" placeholder="000.000.000-00" onblur="formataCPF(this)" pattern="[0-9]{11}" minlength="11" maxlength="11" required>
+                            <label for="inputCpf">CPF</label>
+                            <input type="text" class="form-control" id="inputCpf" name="cpf" placeholder="000.000.000-00" onkeyup="formataCPF(event)" pattern="[0-9]{11}" minlength="14" maxlength="14" required>
                         </div>
                     </div>
             
@@ -107,12 +110,16 @@
                         <input class="form-control" type="email" name="email" id="inputEmail" placeholder="example@email.com" required>
                         </div>
                         <div class="form-group col-md-12">
-                        <label for="inputCEP">Senha</label>
-                        <input type="password" name="senha" class="form-control" id="inputCEP" placeholder="Mínimo 8 caracteres" pattern=".{8,}" title="Oito ou mais caracteres" required>
+                        <label for="inputSenha">Senha</label>
+                        <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Mínimo 8 caracteres" pattern=".{8,}" title="Oito ou mais caracteres" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputPais">País</label>
+                            <input type="text" name="pais" id="inputPais" readonly class="form-control-plaintext" value="&#127463;&#127479; +55">
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputCity">Telefone</label>
-                        <input type="text" class="form-control" id="inputCity" placeholder="(xx) xxxxx-xxxx" onblur="formataTEL(this)" pattern="[0-9]{11}" maxlength="11" required>
+                        <label for="inputTel">Telefone</label>
+                        <input type="text" class="form-control" id="inputTel" placeholder="(xx) xxxxx-xxxx" onkeyup="formataTEL(event)" pattern="[0-9]{11}" minlength="14" maxlength="15" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -126,28 +133,32 @@
                     <button type="submit" class="container btn btn-primary">Cadastrar</button>
 
                     <script>
-                        function formataCPF(cpf) {
-                            const elementoAlvo = cpf
-                            const cpfAtual = cpf.value
-                            let cpfAtualizado;
+                            const formataCPF = event => {
+                            let input = event.target;
+                            input.value = cpf(input.value);
+                            };
 
-                            cpfAtualizado = cpfAtual.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, 
-                            function( regex, argumento1, argumento2, argumento3, argumento4 ) {
-                                    return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
-                            })  
-                            elementoAlvo.value = cpfAtualizado; 
-                            }
-                            /* function formataTEL(telef) {
-                            const elementoAlvo = telef
-                            const telefAtual = telef.value
-                            let telefAtualizado;
+                            const cpf = value => {
+                            if (!value) return "";
+                            value = value.replace(/\D/g, '');
+                            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+                            value = value.replace(/(\d{3})(\d)/, "$1.$2");
+                            value = value.replace(/(\d)(\d{2})$/, "$1-$2");
+                            return value;
+                            };
+                            
+                            const formataTEL = event => {
+                            let input = event.target;
+                            input.value = telefone(input.value);
+                            };
 
-                            cpfAtualizado = cpfAtual.replace(/(\d{2})(\d{4,5})(\d{4})/, 
-                            function( regex, argumento1, argumento2, argumento3) {
-                                    return '(' + argumento1 + ')' + argumento2 + '-' + argumento3;
-                            })  
-                            elementoAlvo.value = telefAtualizado; 
-                            } */
+                            const telefone = value => {
+                            if (!value) return "";
+                            value = value.replace(/\D/g, '');
+                            value = value.replace(/(\d{2})(\d)/, "($1) $2");
+                            value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+                            return value;
+                            };
                     </script>
                 </form>
                 </section>        
