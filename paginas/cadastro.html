@@ -53,6 +53,7 @@
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
             }
         </style>
+        <script src="scripts/funcoes.js"></script>
         
     </head>
     <body>
@@ -112,14 +113,20 @@
                         <div class="form-group col-md-12">
                         <label for="inputSenha">Senha</label>
                         <input type="password" name="senha" class="form-control" id="inputSenha" placeholder="Mínimo 8 caracteres" pattern=".{8,}" title="Oito ou mais caracteres" required>
+                        <div class="col-md-6">
+                            <input class="col-1 form-check-input" type="checkbox" id="verSenha" onclick="mostrarSenha()">
+                            <label class="col form-check-label" for="verSenha">Mostrar senha</label>
                         </div>
-                        <div class="form-group col-sm-2">
-                            <label for="inputPais">País</label>
-                            <input type="text" name="pais" id="inputPais" readonly class="form-control-plaintext" value="&#127463;&#127479; +55">
                         </div>
-                        <div class="form-group col-sm-10">
-                        <label for="inputTel">Telefone</label>
-                        <input type="text" class="form-control" id="inputTel" placeholder="(xx) xxxxx-xxxx" onkeyup="formataTEL(event)" pattern="[0-9]{11}" minlength="14" maxlength="15" required>
+                        <div class="row col-md-12 form-group">
+                            <div class="form-group col-4">
+                                <label for="inputPais">País</label>
+                                <input type="text" name="pais" id="inputPais" disabled class="form-control" value="&#127463;&#127479; +55">
+                            </div>
+                            <div class="form-group col-8">
+                            <label for="inputTel">Telefone</label>
+                            <input type="text" class="form-control" id="inputTel" placeholder="(xx) xxxxx-xxxx" onkeyup="formataTEL(event)" pattern="[0-9]{11}" minlength="14" maxlength="15" required>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -131,35 +138,6 @@
                         </div>
                     </div>
                     <button type="submit" class="container btn btn-primary">Cadastrar</button>
-
-                    <script>
-                            const formataCPF = event => {
-                            let input = event.target;
-                            input.value = cpf(input.value);
-                            };
-
-                            const cpf = value => {
-                            if (!value) return "";
-                            value = value.replace(/\D/g, '');
-                            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-                            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-                            value = value.replace(/(\d)(\d{2})$/, "$1-$2");
-                            return value;
-                            };
-                            
-                            const formataTEL = event => {
-                            let input = event.target;
-                            input.value = telefone(input.value);
-                            };
-
-                            const telefone = value => {
-                            if (!value) return "";
-                            value = value.replace(/\D/g, '');
-                            value = value.replace(/(\d{2})(\d)/, "($1) $2");
-                            value = value.replace(/(\d)(\d{4})$/, "$1-$2");
-                            return value;
-                            };
-                    </script>
                 </form>
                 </section>        
             </section>
