@@ -118,7 +118,7 @@ form{
     border-radius: 55px;
     width: 100%;    
     margin: auto;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.452);
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.335);
 }
@@ -127,6 +127,9 @@ form{
     width: 100%;
     padding: 50px;
     margin: 0px;
+}
+.voo{
+    padding: 20px 50px;
 }
 .botao-busca{
     text-align: right;
