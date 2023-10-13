@@ -154,60 +154,18 @@ img{
 }
 .item-slide{
     color: white;
-    text-shadow: 2px 4px 12px rgb(0, 0, 0, 1.0);
+    text-shadow: 7px 3px 20px rgb(0, 0, 0, 1.0);
 }
+p.item-slide{
+    font-size: 20px;
+}
+
 .promo-slide{
     background-color: rgba(255, 255, 255, 0.615);
     margin-top: -104px;
     line-height: 15px;
-    height: 80pxpx;
     display: flex;
     align-items: center;
-}
-.slide-01-voo{
-    background: url('../imagens/imagens-aviao/imagem-slide01-voo.jpg') no-repeat;
-    background-position: center top;    
-    background-size: cover;
-}
-.slide-02-voo{
-    background: url('../imagens/imagens-aviao/imagem-slide02-voo.jpg') no-repeat;
-    background-position: center bottom;    
-    background-size: cover;
-}
-.slide-03-voo{
-    background: url('../imagens/imagens-aviao/imagem-slide03-voo.jpg') no-repeat;
-    background-position: center bottom;    
-    background-size: cover;
-}
-.slide-01-hotel{
-    background: url('../imagens/imagens-hotel/img-slide-01-hotel.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
-}
-.slide-02-hotel{
-    background: url('../imagens/imagens-hotel/img-slide-02-hotel.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
-}
-.slide-03-hotel{
-    background: url('../imagens/imagens-hotel/img-slide-03-hotel.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
-}
-.slide-01-promo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
-}
-.slide-02-promo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
-}
-.slide-03-promo{
-    background: url('../imagens/imagens-hotel/img-slide-01.jpg') no-repeat;
-    background-position: center center;    
-    background-size: cover;    
 }
 
 .preco-antigo-slide{
