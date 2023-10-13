@@ -34,6 +34,19 @@ a.active > .fundo-icon{
     border-radius: 50%;    
     background-color: var(--cor01);    
 }
+.navbar-brand{
+    margin-left: -30px;
+    margin-right: 30px;
+}
+.navbar-nav{
+    width: 80%;
+    display: flex;
+    
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
 .nav-item{
     font-size: 13px;
 }
@@ -41,7 +54,7 @@ a.active > .fundo-icon{
     padding-bottom: 3px;
 }
 a.active{
-    border-bottom: 3px solid var(--cor01);   
+    border-bottom: 3px solid var(--cor01);
 }
 .nav-link:hover{
     border-bottom: 3px solid var(--cor01);   
@@ -83,8 +96,7 @@ main{
 }
 
 .topo{
-    margin: 10px auto;
-    border-radius: 10px;
+    margin: auto;
     padding: 20px;
 }
 .titulo-formulario{
