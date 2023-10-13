@@ -62,10 +62,7 @@ main{
     width: 100%;
     max-width: 1300px;
 }
-.topo-voo{    
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px 20px;
+.topo-voo{
     background: url('../imagens/imagens-aviao/img-meio-aviao.jpg') no-repeat fixed;
     background-position: center center;    
     background-size: cover;    
