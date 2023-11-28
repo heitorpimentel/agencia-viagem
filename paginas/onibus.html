@@ -49,11 +49,13 @@
                             class="material-symbols-rounded fundo-icon">contact_support</span><br>Contato</a>
                     <ul class="nav justify-content-center">
                         <li class="nav-item dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Entre ou Cadastre-se"><span class="material-symbols-rounded fundo-icon">account_circle
-                            </span><br> Login</a>
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false" title="Entre ou Cadastre-se"><span
+                                    class="material-symbols-rounded fundo-icon">account_circle
+                                </span><br> Login</a>
                             <div class="dropdown-menu">
-                            <a class="dropdown-item" href="login.html">Entrar</a>
-                            <a class="dropdown-item" href="cadastro.html">Cadastre-se</a>
+                                <a class="dropdown-item" href="login.html">Entrar</a>
+                                <a class="dropdown-item" href="cadastro.html">Cadastre-se</a>
                             </div>
                         </li>
                     </ul>
@@ -65,96 +67,106 @@
     <main>
         <section class="topo-onibus">
             <div class="sombra-onibus">
-                    <div class="buscas">
-                        <h3 class="titulo-formulario py-2">
-                            Ônibus
-                        </h3>
-                        <form action="busca-topo.html" method="post">
-                            <div class="container">
-                                <script src="./scripts/funcoes.js"></script>
+                <div class="buscas">
+                    <h3 class="titulo-formulario py-2">
+                        Ônibus
+                    </h3>
+                    <form action="busca-topo.html" method="post">
+                        <div class="container">
+                            <script src="./scripts/funcoes.js"></script>
+                            <div class="row">
                                 <div class="custom-control custom-radio custom-control-inline pl-5 pb-3">
-                                    <input type="radio" id="idaVolta" name="inputData"
-                                        class="custom-control-input" onclick="esconderData()" checked>
+                                    <input type="radio" id="idaVolta" name="inputData" class="custom-control-input"
+                                        onclick="esconderData()" checked>
                                     <label class="custom-control-label" for="idaVolta">Ida e Volta</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="soIda" name="inputData"
-                                        class="custom-control-input" onclick="esconderData()">
+                                    <input type="radio" id="soIda" name="inputData" class="custom-control-input"
+                                        onclick="esconderData()">
                                     <label class="custom-control-label" for="soIda">Somente Ida</label>
                                 </div>
-                                <div class="container flex-wrap">
-                                    <div id="datas-select" class=" col-sm-12 ">
-                                        <div class="col">
-                                            <div class="row" id="label-origem"><label for="trecho-de-ida"><span
-                                                        class="material-symbols-rounded fundo-icon">directions_bus</span>
-                                                    Origem</label></div>
-                                            <div class="row"><input class="form-control" type="text" id="trecho-de-ida"
-                                                    list="lista-lugares" placeholder="Busque por cidade" required></div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="row" id="label-destino"><label for="trecho-de-volta"><span
-                                                        class="material-symbols-rounded fundo-icon">directions_bus</span>
-                                                    Destino</label></div>
-                                            <div class="row"><input class="form-control" type="text" id="trecho-de-volta"
-                                                    list="lista-lugares" placeholder="Busque por cidade" required></div>
-                                        </div>
-                                        <!-- Datas inicio -->
-                                        <div class="col">
-                                            <div class="row"><label for="trecho-de-ida"><span
-                                                        class="material-symbols-rounded fundo-icon">calendar_month</span>
-                                                    Ida</label></div>
-                                            <div class="row"><input class="form-control" type="date" aria-label="Ida"
-                                                    id="data-ida" required></div>
-                                        </div>
-                                        <div class="col" id="dataDeVolta">
-                                            <div class="row"><label for="trecho-de-ida"><span
-                                                        class="material-symbols-rounded fundo-icon">calendar_month</span>
-                                                    Volta</label></div>
-                                            <div class="row"><input class="form-control" type="date" aria-label="Volta"
-                                                    id="data-volta" required></div>
-                                        </div>
-                                        <!-- Datas fim -->
-                                    </div>
-                                    <!-- Selecione quantidade inicio-->
-                                    <div>
-                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref"><span
-                                                class="material-symbols-rounded fundo-icon">diversity_3</span>Passageiros</label>
-                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"
-                                            style="width: 100px;">
-                                            <option selected>Escolha</option>
-                                            <option value="1">Um</option>
-                                            <option value="2">Dois</option>
-                                            <option value="3">Três</option>
-                                            <option value="4">Quatro</option>
-                                            <option value="5">Cinco</option>
-                                            <option value="6">Seis</option>
-                                        </select>
-                                    </div>
-                                    <!-- Selecione quantidade fim -->
-                                    <!-- Botão busca -->
-                                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                        <label class="custom-control-label" for="customControlInline">Bebê a bordo</label>
-                                        <div class="botao-busca"><button type="submit" class="btn btn-lg my-1">Buscar</button>
-                                        </div>
-                                    </div>
-                                    <!-- Fim botao busca -->
-                                </div>
                             </div>
-                            <datalist id="lista-lugares">
-                                <option>Natal, Rio Grande do Norte</option>
-                                <option>Gravatá, Pernambuco</option>
-                                <option>Garanhuns, Pernambuco</option>
-                                <option>Recife, Pernambuco</option>
-                                <option>Martins, Rio Grande do Norte</option>
-                                <option>Pipa, Rio Grande do Norte</option>
-                                <option>Maceió, Alagoas</option>
-                            </datalist>
-                        </form>
-                    </div>
+                            <div>
+                                <div id="datas-select" class="row">
+                                    <div class="form-group col-md-4 col-sm-6">
+                                        <div class="" id="label-origem"><label for="trecho-de-ida"><span
+                                                    class="material-symbols-rounded fundo-icon">directions_bus</span>
+                                                Origem</label></div>
+                                        <div><input class="form-control" type="text" id="trecho-de-ida"
+                                                list="lista-lugares" placeholder="Busque por cidade" required></div>
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6">
+                                        <div id="label-destino"><label for="trecho-de-volta"><span
+                                                    class="material-symbols-rounded fundo-icon">directions_bus</span>
+                                                Destino</label></div>
+                                        <div><input class="form-control" type="text" id="trecho-de-volta"
+                                                list="lista-lugares" placeholder="Busque por cidade" required></div>
+                                    </div>
+                                    <!-- Datas inicio -->
+                                    <div class="form-group col-md-2 col-sm-6" id="dataDeIda">
+                                        <div>
+                                            <label for="trecho-de-ida">
+                                                <span class="material-symbols-rounded fundo-icon">calendar_month</span>
+                                                Ida</label>
+                                        </div>
+                                        <div>
+                                            <input class="form-control" type="date" aria-label="Ida" id="data-ida" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2 col-sm-6" id="dataDeVolta">
+                                        <div>
+                                            <label class="labelNoWrap" for="trecho-de-ida"><span
+                                                    class="material-symbols-rounded fundo-icon">calendar_month</span>
+                                                Volta</label>
+                                        </div>
+                                        <div>
+                                            <input class="form-control" type="date" aria-label="Volta" id="data-volta" required>
+                                        </div>
+                                    </div>
+                                    <!-- Datas fim -->
+                                </div>
+                                <!-- Selecione quantidade inicio-->
+                                <div class="row">
+                                    <div class="form-group col-md-4 col-sm-12">
+                                      <label for="inlineFormCustomSelectPref"><span
+                                          class="material-symbols-rounded fundo-icon">diversity_3</span>Passageiros</label>
+                                      <select class="form-control" id="inlineFormCustomSelectPref"
+                                        required>
+                                        <option selected>Escolha</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                <!-- Selecione quantidade fim -->
+                                <!-- Botão busca -->
+                                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                    
+                                    <div class="botao-busca"><button type="submit"
+                                            class="btn btn-lg my-1">Buscar</button>
+                                    </div>
+                                </div>
+                                <!-- Fim botao busca -->
+                            </div>
+                        </div>
+                        <datalist id="lista-lugares">
+                            <option>Natal, Rio Grande do Norte</option>
+                            <option>Gravatá, Pernambuco</option>
+                            <option>Garanhuns, Pernambuco</option>
+                            <option>Recife, Pernambuco</option>
+                            <option>Martins, Rio Grande do Norte</option>
+                            <option>Pipa, Rio Grande do Norte</option>
+                            <option>Maceió, Alagoas</option>
+                        </datalist>
+                    </form>
+                </div>
             </div>
         </section>
-        
+
         <section class="position-cards">
             <section class="fundo-pos-slide-onibus">
                 <div class="titulo-mensagem-card">
@@ -164,71 +176,77 @@
                 <section class="cartoes py-5">
 
 
-                    <div class="container container-fluid card" >                        
+                    <div class="container container-fluid card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Recife x Natal</h5>
                             <p class="card-text">Consulte disponibilidade de horários e curta a viagem!</p>
                             <p class="col">
                                 <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
                                 <strong class="row preco-novo">R$ 800,00</strong>
-                            </p>                            
-                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container" type="button">Aproveite já</button></a>
+                            </p>
+                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container"
+                                    type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="container container-fluid card">                        
+                    <div class="container container-fluid card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Maceió x Fortaleza</h5>
                             <p class="card-text">Consulte disponibilidade de horários e curta a viagem!</p>
-                                <p class="col">
-                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
-                                    <strong class="row preco-novo">R$ 800,00</strong>
-                                </p>
-                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container" type="button">Aproveite já</button></a>
+                            <p class="col">
+                                <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                <strong class="row preco-novo">R$ 800,00</strong>
+                            </p>
+                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container"
+                                    type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="container container-fluid card">                        
+                    <div class="container container-fluid card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Natal x Martins</h5>
                             <p class="card-text">Consulte disponibilidade de horários e curta a viagem!</p>
-                                <p class="col">
-                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
-                                    <strong class="row preco-novo">R$ 800,00</strong>
-                                </p>
-                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container" type="button">Aproveite já</button></a>
+                            <p class="col">
+                                <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                <strong class="row preco-novo">R$ 800,00</strong>
+                            </p>
+                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container"
+                                    type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="container container-fluid card">                        
+                    <div class="container container-fluid card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Recife x Garanhuns</h5>
                             <p class="card-text">Consulte disponibilidade de horários e curta a viagem!</p>
-                                <p class="col">
-                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
-                                    <strong class="row preco-novo">R$ 800,00</strong>
-                                </p>
-                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container" type="button">Aproveite já</button></a>
+                            <p class="col">
+                                <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                <strong class="row preco-novo">R$ 800,00</strong>
+                            </p>
+                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container"
+                                    type="button">Aproveite já</button></a>
                         </div>
                     </div>
-                    <div class="container container-fluid card">                        
+                    <div class="container container-fluid card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Gravatá x Recife</h5>
                             <p class="card-text">Consulte disponibilidade de horários e curta a viagem!</p>
-                                <p class="col">
-                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
-                                    <strong class="row preco-novo">R$ 800,00</strong>
-                                </p>
-                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container" type="button">Aproveite já</button></a>
+                            <p class="col">
+                                <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                <strong class="row preco-novo">R$ 800,00</strong>
+                            </p>
+                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container"
+                                    type="button">Aproveite já</button></a>
                         </div>
                     </div>
 
-                    <div class="container container-fluid card">                        
+                    <div class="container container-fluid card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Natal x Pipa</h5>
                             <p class="card-text">Consulte disponibilidade de horários e curta a viagem!</p>
-                                <p class="col">
-                                    <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
-                                    <strong class="row preco-novo">R$ 800,00</strong>
-                                </p>
-                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container" type="button">Aproveite já</button></a>
+                            <p class="col">
+                                <small class="row preco-antigo"><del>R$ 1.000,00</del></small>
+                                <strong class="row preco-novo">R$ 800,00</strong>
+                            </p>
+                            <a href="busca-cards.html" class="btn container botao-busca"><button class="btn container"
+                                    type="button">Aproveite já</button></a>
                         </div>
                     </div>
 
@@ -240,71 +258,83 @@
     <footer class="py-3">
         <div class="container">
             <div class="row">
-              <div class="col-6 col-md-2 mb-3">
-                <h5>Fale conosco</h5>
-                <hr class="border-top">
-                <ul class="nav flex-column">
-                  <li class="nav-item nav-item-footer mb-2"><a href="contato.html" class="nav-item-footer p-0">Nossos números</a></li>
-                  <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Nosso email</a></li>
-                  <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Nosso Endereço</a></li>
-                </ul>
-              </div>
-              <div class="col-6 col-md-2 mb-3">
-                <h5>Promoções</h5>
-                <hr class="border-top">
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Promoções Vôos</a></li>
-                  <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Promoções Hotéis</a></li>
-                  <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Promoções Ônibus</a></li>
-                  <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Pacotes</a></li>                    
-                </ul>
-              </div>
-              <div class="col-6 col-md-2 mb-3">
-                <h5>Sobre</h5>
-                <hr class="border-top">
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Quem somos</a></li>
-                  <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Perguntas frequentes</a></li>
-                </ul>
-              </div>
-              <div class="col-md-5 offset-md-1 mb-3">
-                <form>
-                  <h5>Receba as novidades</h5>
-                  <hr class="py-3 border-top">
-                  <p>As melhores promoções no seu email</p>
-                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                    
-                    <input id="newsletter1" type="email" class="form-control" placeholder="Digite seu email">
-                    <button class="btn btn-secondary btn-sm" type="button" data-toggle="modal" data-target="#modalExemplo">Se inscrever</button>
-                    <!-- Modal -->
-                      <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title text-modal" id="exampleModalLabel">Parabéns!!</h4>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Fale conosco</h5>
+                    <hr class="border-top">
+                    <ul class="nav flex-column">
+                        <li class="nav-item nav-item-footer mb-2"><a href="contato.html"
+                                class="nav-item-footer p-0">Nossos números</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Nosso email</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Nosso Endereço</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Promoções</h5>
+                    <hr class="border-top">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Promoções
+                                Vôos</a></li>
+                        <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Promoções
+                                Hotéis</a></li>
+                        <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Promoções
+                                Ônibus</a></li>
+                        <li class="nav-item mb-2"><a href="promocoes.html" class="nav-item-footer p-0">Pacotes</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Sobre</h5>
+                    <hr class="border-top">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Quem somos</a></li>
+                        <li class="nav-item mb-2"><a href="contato.html" class="nav-item-footer p-0">Perguntas
+                                frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Receba as novidades</h5>
+                        <hr class="py-3 border-top">
+                        <p>As melhores promoções no seu email</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+
+                            <input id="newsletter1" type="email" class="form-control" placeholder="Digite seu email">
+                            <button class="btn btn-secondary btn-sm" type="button" data-toggle="modal"
+                                data-target="#modalExemplo">Se inscrever</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title text-modal" id="exampleModalLabel">Parabéns!!</h4>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class=" text-modal">Agora você irá receber as melhores promoções e
+                                                aproveitar a viagem com os melhores descontos!</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                              <p class=" text-modal">Agora você irá receber as melhores promoções e aproveitar a viagem com os melhores descontos!</p>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>                                
-                            </div>
-                          </div>
+                            <!-- Fim Modal -->
                         </div>
-                      </div>
-                        <!-- Fim Modal -->
-                  </div>
-                </form>
-              </div>
+                    </form>
+                </div>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-4 border-top">
-              <p class="frase-rodape">© 2023 Desenvolvido por <strong>Heitor Pimentel</strong></p>                
+                <p class="frase-rodape">© 2023 Desenvolvido por <strong>Heitor Pimentel</strong></p>
             </div>
         </div>
-  </footer>
+    </footer>
 </body>
 
 </html>

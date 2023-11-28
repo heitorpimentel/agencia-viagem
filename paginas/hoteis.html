@@ -70,41 +70,41 @@
                 </h3>
                 <form action="busca-topo.html" method="post">
                     <div class="container">
-                        <div class="container flex-wrap">
-                            <div id="datas-select" class=" col-sm-12 ">
-                                <div class="container col">
-                                    <div class="row" id="label-origem"><label for="cidade-hotel"><span
+                        <div>
+                            <div id="datas-select" class="row">
+                                <div class="form-group col-md-4 col-sm-12">
+                                    <div id="label-origem"><label for="cidade-hotel"><span
                                                 class="material-symbols-rounded fundo-icon">apartment</span>
                                             Cidade</label></div>
-                                    <div class="row"><input class="form-control" type="text" id="cidade-hotel"
+                                    <div><input class="form-control" type="text" id="cidade-hotel"
                                             list="lista-lugares" placeholder="Busque por cidade" required></div>
                                 </div>
                                 
                                 <!-- Datas inicio -->
-                                <div class="col">
-                                    <div class="row"><label for="data-de-ida"><span
+                                <div class="form-group col-md-3 col-sm-6">
+                                    <div><label for="data-de-ida"><span
                                                 class="material-symbols-rounded fundo-icon">calendar_month</span>
                                             Check-In</label></div>
-                                    <div class="row"><input class="form-control" type="date" aria-label="Ida"
+                                    <div><input class="form-control" type="date" aria-label="Ida"
                                             id="data-ida" required></div>
                                 </div>
-                                <div class="col">
-                                    <div class="row"><label for="data-de-volta"><span
+                                <div class="form-group col-md-3 col-sm-6">
+                                    <div><label for="data-de-volta"><span
                                                 class="material-symbols-rounded fundo-icon">calendar_month</span>
                                             Check-Out</label></div>
-                                    <div class="row"><input class="form-control" type="date" aria-label="Volta"
+                                    <div><input class="form-control" type="date" aria-label="Volta"
                                             id="data-volta" required></div>
                                 </div>
                                 <!-- Datas fim -->
                                 <!-- Selecione quantidade inicio-->
-                                <div>
-                                    <div class="col">
-                                        <label class="" for="inlineFormCustomSelectPref"><span
+                                <div class="form-group col-md-2 col-sm-6">
+                                    <div>
+                                        <label class="labelNoWrap" for="inlineFormCustomSelectPref"><span
                                                 class="material-symbols-rounded fundo-icon">king_bed</span>Quartos</label>
                                     </div>
-                                    <div class="col">
+                                    <div>
                                         <select class="custom-select" id="inlineFormCustomSelectPref"
-                                            style="width: 100px;" required>
+                                           required>
                                             <option selected>Escolha</option>
                                             <option value="1">Um</option>
                                             <option value="2">Dois</option>
@@ -115,14 +115,14 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="col">
-                                        <label class="" for="inlineFormCustomSelectPref"><span
+                                <div class="form-group col-md-4 col-sm-6">
+                                    <div>
+                                        <label for="inlineFormCustomSelectPref"><span
                                                 class="material-symbols-rounded fundo-icon">diversity_3</span>Hóspedes</label>
                                     </div>
-                                    <div class="col">
+                                    <div>
                                         <select class="custom-select" id="inlineFormCustomSelectPref"
-                                            style="width: 100px;" required>
+                                             required>
                                             <option selected>Escolha</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -131,10 +131,6 @@
                                             <option value="5">5</option>
                                             <option value="6">6</option>
                                         </select>
-                                    </div>
-                                    <div class="custom-control custom-checkbox my-1 ml-3">
-                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                        <label class="custom-control-label" for="customControlInline">Bebê</label>
                                     </div>
                                 </div>
                             </div>

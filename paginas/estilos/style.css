@@ -102,26 +102,28 @@ main{
 .titulo-formulario{
     text-align: center;
 }
-#datas-select{
+.labelNoWrap{
+    width: 100px;
+}
+/* #datas-select{
     display: flex;    
     flex-wrap: wrap;    
-    gap: 10px;
-}
+} */
 
-.radio{
+/* .radio{
     width: 100%;
-}
-form{
+} */
+/* form{
     width: 100%;
     display: block;
     margin: auto;
-}
-#label-origem{
+} */
+/* #label-origem{
     min-width: 280px;
 }
 #label-destino{
     min-width: 280px;
-}
+} */
 .buscas{
     background-color: rgba(255, 255, 255, 0.804);
     border-radius: 55px;

@@ -2,15 +2,24 @@ function esconderData(){
     const soIdaRadio = document.getElementById('soIda');
     const idaVoltaRadio = document.getElementById('idaVolta')
     const divDataVolta = document.getElementById('dataDeVolta');
+    const divDataIda = document.getElementById('dataDeIda')
 
     soIdaRadio.addEventListener('change', () => {
         if (soIdaRadio.checked) {
             divDataVolta.style.display = 'none';
+            divDataIda.classList.remove('col-md-2')
+            divDataIda.classList.remove('col-sm-6')
+            divDataIda.classList.add('col-md-4')
+            divDataIda.classList.add('col-sm-12')
         }
     });                    
     idaVoltaRadio.addEventListener('change', () => {
         if (idaVoltaRadio.checked) {
             divDataVolta.style.display = 'block';
+            divDataIda.classList.remove('col-md-4')
+            divDataIda.classList.remove('col-sm-12')
+            divDataIda.classList.add('col-md-2')
+            divDataIda.classList.add('col-sm-6')
         }
     });
   }
