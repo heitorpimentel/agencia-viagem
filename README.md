@@ -1,9 +1,6 @@
 # Instruções Gerais
 
 ## Modelagem
-![image](https://github.com/heitorpimentel/agencia-viagem/assets/130229709/1f2ad6a8-5a02-41b0-96eb-d5aef0c1800e)
-![image](https://github.com/heitorpimentel/agencia-viagem/assets/130229709/15c168ff-72f9-476a-ab13-def86d122056)
-
 A modelagem do banco de dados bem como o backup(dump) já com dados inseridos estão na pasta *["banco_de_dados"](https://github.com/heitorpimentel/agencia-viagem/tree/main/banco_de_dados)*
 ## UML
 ![image](https://github.com/heitorpimentel/agencia-viagem/assets/130229709/07012841-d4ac-4f2c-86c5-eb483ed165c5)
